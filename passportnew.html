@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменяем кириллицу на латиницу по клику</title>
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+
+<style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        text-align: center;
+    }
+        .passport-container {
+            position: relative;
+            display: inline-block;
+        }
+        .passport-container img {
+            width: 600px;
+            height: auto;
+        }
+        .text {
+            color:#73a959;
+            font-size: 1.3em;
+            margin-bottom: 250px;
+        }
+    .menu {
+        font-size: 1.5em;
+        margin-top: 50px;
+        position: fixed; 
+        top: 20px;
+        right:20px;
+        padding: 10px;
+        margin-right: 300px; 
+        text-align: left;  
+           
+    }
+
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    .menu a:hover {
+      color: #73a959; 
+    }
+    .menu a.active {
+      text-decoration: underline; 
+      color: #73a959; 
+      font-weight: bold; 
+    }
+    .inline {
+      display: inline-flex;
+      align-items: normal; 
+    }
+
+    .inline img {
+      margin-left: 7px;
+    }
+
+
+        .block1 {
+            top: 90px;
+            left: 170px;
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        .block2 {
+            top: 468px;
+            left: 320px;
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        .block3 {
+            top: 530px;
+            left: 340px;
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        .block4 {
+            top: 565px;
+            left: 325px;
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        .block5 {
+            top: 596px;
+            left: 234px;
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        .block6 {
+            top: 630px;
+            left: 340px;
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        .block7{
+            top: 596px;
+            left: 370px;  
+            position: absolute;
+            color: black;
+            font-size: 1.2em;  
+        }
+        #photo {
+            position: absolute;
+            top: 494px;
+            left: 25px;
+            width: 168px;
+            height: auto;
+            
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color:#73a959;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .vertical-text {
+            position: absolute;
+            top: 26%;
+            left: 20px;
+            transform: translateY(-50%) rotate(-90deg); 
+            transform-origin: left top; 
+            text-decoration: none;
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 0.1em;
+        }
+
+        .vertical-text:hover {
+            color: #73a959; 
+        }
+        
+</style>
+</head>
+<body>
+    <a href="index.html" class="vertical-text">Panorama</a>
+
+    <div class="menu">
+        <a href="index.html">О нас</a>
+        <span class="inline">
+          Подборка</a> <a href="podborka.html"><img height="20px" src="icon.jpg"></a>
+        </span>
+        <a href="index.html#feedback">Отзывы</a>
+        <a href="https://hd.kinopoisk.ru/">Платформа</a>
+        <a href="kabinet.html">Личный кабинет</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="passportnew.html" class="active">Паспорт</a>
+        <a href="algproblem.html">Задача</a>
+      </div>
+
+    <div class="passport-container">
+        <img src="photo_passport.jpg" alt="Паспорт РФ">
+
+        <img id="photo" src="portret_passport.jpg" >
+
+        <div class="block1">ГУ МВД ПО Г. МОСКВЕ</div>
+        <div class="block2" >Бобрышева</div>
+        <div class="block3" >Мария</div>
+        <div  class="block4">Алексеевна</div>
+        <div class="block5">Жен</div>
+        <div class="block6" >Москва</div>
+        <div class="block7" >17.02.2005</div>
+    </div>  
+    <div class="button-container">
+        <button id="translateButton">Перевести</button>
+    </div>
+
+    <a href="screenshot.html" class="text">Скриншот</a>
+
+    <script src="pasport.js"></script>
+</body>
+</html>

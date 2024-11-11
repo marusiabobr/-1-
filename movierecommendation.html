@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Recommendation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    select, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1em;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Как ты себя чувствуешь?</h1>
+  <form id="moodForm">
+    <label for="mood">Твое настроение:</label>
+    <select id="mood" name="mood">
+      <option value="romantic">Романтичное</option>
+      <option value="adventurous">Приключенческое</option>
+      <option value="thoughtful">Задумчивое</option>
+      <option value="melancholy">Грустное</option>
+    </select>
+    <br>
+    <button type="button" onclick="showRecommendation()">Показать результат</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  function showRecommendation() {
+    const mood = document.getElementById("mood").value;
+    let movie;
+
+    // Подбираем фильм на основе настроения
+    switch(mood) {
+      case 'romantic':
+        movie = 'Мы рекомендуем посмотреть: Crazy, Stupid, Love';
+        break;
+      case 'adventurous':
+        movie = 'Мы рекомендуем посмотреть: Knockin\' on Heaven\'s Door';
+        break;
+      case 'thoughtful':
+        movie = 'Мы рекомендуем посмотреть: Stalker';
+        break;
+      case 'melancholy':
+        movie = 'Мы рекомендуем посмотреть: Dancer in the Dark';
+        break;
+      default:
+        movie = 'Мы рекомендуем посмотреть: Another Round';
+    }
+
+    // Отображаем результат на странице
+    document.getElementById("result").innerText = movie;
+  }
+</script>
+
+</body>
+</html>
+

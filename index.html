@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Panorama</title>
+  <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1500px;
+      margin: 0 auto;
+      height: 95vh; 
+    }
+
+    .image-section {
+      width: 100%;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .menu {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .menu a.active {
+        text-decoration: underline; 
+        color: #73a959; 
+        font-weight: bold; 
+    }
+    .menu a:hover {
+      color: #73a959; 
+    }
+
+    .title {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 0;
+      color: #73a959;
+    }
+
+    .description, .additional-text {
+      font-size: 1.5em;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9em;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+      color: #666;
+    }
+
+    
+    .vertical-text {
+      position: absolute;
+      top: 26%;
+      left: 20px;
+      transform: translateY(-50%) rotate(-90deg); 
+      transform-origin: left top; 
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      letter-spacing: 0.1em;
+    }
+
+    .vertical-text:hover {
+      color: #73a959; 
+    }
+    
+
+    .content {
+      margin-left: 80px; 
+      padding: 20px;
+    }
+    .inline {
+      display: inline-flex;
+      align-items: normal; 
+    }
+    .inline img {
+      margin-left: 7px;
+    }
+    .link {
+        text-decoration: none; 
+        color: #333; 
+    }
+    .link:hover {
+        color: #73a959;
+    }
+    .feedback-form {
+        display: inline-block;
+        background-color:#73a959; 
+        padding: 20px; 
+        border-radius: 10px;
+        font-size: 2em;
+        width: 95%;
+        color: #0e0a36;
+    }
+    .arrow {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color:#0e0a36;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  textarea {
+    width: 400px; 
+    background-color: #f0f0f0;
+    color: #333; 
+    border: 2px solid #73a959;
+    padding: 10px; 
+    border-radius: 20px; 
+  }
+
+   
+  </style>
+</head>
+<body>
+   <a href="index.html" class="vertical-text">Panorama</a>
+  <div class="container">
+    
+    <div class="image-section">
+      <img src="pingminor1.jpg" alt="Panorama">
+    </div>
+
+    
+    <div class="content-section">
+      
+      <div class="menu">
+        <a href="index.html" class="active">О нас</a>
+        <span class = "inline">
+        Подборка <a href="podborka.html"><img height="20px" src="icon.jpg"></a>
+        </span>
+        <a href="#feedback">Отзывы</a>
+        <a href="https://hd.kinopoisk.ru/">Платформа</a>
+        <a href="kabinet.html">Личный кабинет</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="passportnew.html">Паспорт</a>
+        <a href="algproblem.html">Задача</a>
+      </div>
+
+      
+      <h1 class="title">Panorama</h1>
+      
+      <p class="description">
+        Когда сомневаетесь, что посмотреть, наш проект будет вашим проводником и подберет для вас фильмы, которые соответствуют вашему настроению. Мы здесь, чтобы упростить процесс выбора и сделать его более персональным. Поделитесь своим настроением, и мы подберём фильм, который лучше всего отражает ваше внутреннее состояние. Наши рекомендации основаны на эмоциях и внутреннем состоянии, а не на популярности или рейтингах. Найдите кино, которое действительно откликнется вам.
+      </p>
+            
+       <p class ="footer">
+        Рекомендованные фильмы не являются лечением. При необходимости, обратитесь за помощью к специалисту. 
+       </p>
+      </div>
+    </div>
+  </div>
+
+  
+<div style="text-align: center; margin-top: 50px;">
+    <a id="feedback"></a>
+    <h2 class="title">Отзывы и предложения</h2>
+    <div class="feedback-form" >
+      <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <p><input type="hidden" name="q" value="search"></p>
+        <label for="user_name">Имя:</label><br>
+        <input type="text" id="user_name" name="user_name" required><br><br>
+        
+        <label for="user_email">Электронная почта:</label><br>
+        <input type="email" id="user_email" name="user_email" required><br><br>
+
+        <label for="user_password">Пароль:</label><br>
+        <input type="password" id="user_password" name="user_password" required><br><br>
+        <input type="hidden" name="form_type" value="feedback_form">
+        
+        <label for="rating">Оцените работу сайта по шкале от 1 до 5:</label><br>
+        <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
+        <label>Больше всего вы оценили:</label><br>
+        <input type="checkbox" id="convinience" name="extra_feedback" value="convinience">
+        <label for="convinience">Удобство пользования</label><br>
+        <input type="checkbox" id="beauty" name="extra_feedback" value="beauty">
+        <label for="beauty">Дизайн сайта</label><br><br>
+        <input type="checkbox" id="choice" name="extra_feedback" value="choice">
+        <label for="choice">Предложенный фильм</label><br><br>
+
+        <label>Ваш отзыв скорее:</label><br>
+        <input type="radio" id="positive" name="review_type" value="positive" required>
+        <label for="positive">Положительный</label><br>
+        <input type="radio" id="negative" name="review_type" value="negative" required>
+        <label for="negative">Негативный</label><br><br>
+
+        <label for="feedback">Ваши предложения по работе проекта:</label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="40" required></textarea><br><br>
+        
+        <input class="description" type="submit" value="Отправить">
+      </form>
+    </div>
+</div>
+ 
+<a href="index.html" class="arrow">К началу</a>
+
+</body>
+</html>
+

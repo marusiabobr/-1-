@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подборка</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      margin: 0;
+      background-color: #ffffff;
+    }
+    .container {
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    select, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1em;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+    #result a {
+      color: #73a959;
+      text-decoration: none;
+    }
+    #result a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Твое настроение сейчас</h1>
+  <form id="moodForm">
+    <label for="mood">Твое настроение сейчас:</label>
+    <select id="mood" name="mood">
+      <option value="romantic">Романтичное</option>
+      <option value="adventurous">Приключенческое</option>
+      <option value="thoughtful">Задумчивое</option>
+      <option value="melancholy">Грустное</option>
+    </select>
+    <br>
+    <button type="button" onclick="showRecommendation()">Результат</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  function showRecommendation() {
+    const mood = document.getElementById("mood").value;
+    let movie;
+    let url;
+
+    
+    switch(mood) {
+      case 'romantic':
+        movie = 'Эта дурацкая любовь';
+        url = 'crazy_stupid_love.html';
+        break;
+      case 'adventurous':
+        movie = 'Джентльмены';
+        url = 'gentlemen.html';
+        break;
+      case 'thoughtful':
+        movie = 'Сталкер';
+        url = 'https://www.kinopoisk.ru/film/43970/';
+        break;
+      case 'melancholy':
+        movie = 'Танцующуя в темноте';
+        url = 'https://www.kinopoisk.ru/film/646/';
+        break;
+      default:
+        movie = 'Another Round';
+        url = 'another_round.html';
+    }
+
+    
+    document.getElementById("result").innerHTML = `Мы рекомендуем посмотреть: <a href="${url}" target="_blank">${movie}</a>`;
+  }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentlemen</title>
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: aliceblue;
+    }
+    .title {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #73a959;
+      text-align: center; 
+      margin-top: 20px;
+    }
+    .menu {
+      font-size: 1.5em;
+      margin-top: 19px;
+      position: relative; 
+      top: 20px;
+      right:20px;
+      padding: 10px;
+      margin-left: 999px;   
+        
+    }
+
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 10px;
+      
+    }
+    
+    .menu a.active {
+        text-decoration: underline; 
+        color: #73a959; 
+        font-weight: bold; 
+    }
+    .menu a:hover {
+      color: #73a959; 
+    }
+    .vertical-text {
+      position: absolute;
+      top: 26%;
+      left: 20px;
+      transform: translateY(-50%) rotate(-90deg); 
+      transform-origin: left top; 
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      letter-spacing: 0.1em;
+    }
+
+    .vertical-text:hover {
+      color: #73a959; 
+    }
+    .inline {
+      display: inline-flex;
+      align-items: normal; 
+    }
+    .inline img {
+      margin-left: 7px;
+    }
+    .description {
+      font-size: 1.5em;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+    .photo {
+        margin-left: 300px
+    }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="vertical-text">Panorama</a>
+    
+    <div class="menu">
+        <a href="index.html">О нас</a>
+        <span class="inline">
+          <a href="podborka.html" class="active">Подборка</a> <a href="podborka.html"><img height="20px" src="icon.jpg"></a>
+        </span>
+        <a href="index.html#feedback">Отзывы</a>
+        <a href="https://hd.kinopoisk.ru/">Платформа</a>
+        <a href="kabinet.html">Личный кабинет</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="passportnew.html">Паспорт</a>
+        <a href="algproblem.html">Задача</a>
+    </div>
+<h2 class="title">Эта дурацкая любовь</h2>
+
+<h3 class="description">Если вам понравился этот фильм, рекоммендуем также посмотреть:</h3>
+
+<div class="description">
+<ol>
+    <li>Бедные-несчастные
+        <ul>
+            <li>Эмма Стоун</li>
+            <li>Марк Руффало</li>
+            <li>Уиллем Дефо</li>
+        </ul>
+    </li>
+    <li>Ла Ла Лэнд
+        <ul>
+            <li>Эмма Стоун</li>
+            <li>Райан Гослинг</li>
+            <li>Джон Ледженд</li>
+        </ul>
+    </li>
+    <li>Реальная любовь 
+        <ul>
+            <li>Хью Грант</li>
+            <li>Кира Найтли</li>
+            <li>Билл Найи</li>
+        </ul>
+    </li>
+    
+</ol>
+</div>
+
+<div class="photo">
+    <figure>
+        <img src="crazy_photo.webp" alt="illustration" title="Эта дурацкая любовь - кадр из фильма">
+        <figcaption>"Даже в худшие моменты никогда не переставай пытаться." - Эта дурацкая любовь</figcaption>
+    </figure>
+</div>
+
+</body>
